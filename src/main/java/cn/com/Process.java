@@ -1,7 +1,9 @@
-package com.cn;
+package cn.com;
 
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.*;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Pointcut;
 
 /**
  * Created by 周太宇 on 2017/10/13.
@@ -10,7 +12,7 @@ import org.aspectj.lang.annotation.*;
 @Aspect
 public class Process {
     //统一定义切点
-    @Pointcut("execution(* com.cn.Eat.eating(..))")
+    @Pointcut("execution(* cn.com.Eat.eating(..))")
     public void eat(){}
 
     @Around("eat()")
